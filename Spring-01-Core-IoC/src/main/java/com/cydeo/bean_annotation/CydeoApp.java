@@ -10,7 +10,7 @@ public class CydeoApp {
 
         FullTimeMentor ft = container.getBean(FullTimeMentor.class);
 //        PartTimeMentor pt = container.getBean("test",PartTimeMentor.class);
-        PartTimeMentor pt = container.getBean(PartTimeMentor.class);
+        PartTimeMentor pt = container.getBean(PartTimeMentor.class); 
 
         ft.createAccount();
         pt.createAccount();
