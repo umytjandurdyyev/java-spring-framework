@@ -19,8 +19,8 @@ public class StudentController {
         String subject = "Collections";
         model.addAttribute("subject",subject);
 
-        //create some random studentId(0-1000) and show it in your UI
-        int studentId=new Random().nextInt();
+//        //create some random studentId(0-1000) and show it in your UI
+        int studentId = new Random().nextInt();
         model.addAttribute("id",studentId);
 
         List<Integer> numbers = new ArrayList<>();
@@ -32,6 +32,7 @@ public class StudentController {
 
         Student student = new Student(1,"Mike","Smith");
         model.addAttribute("student",student);
-        return "student/welcome";
+
+        return "/student/welcome";
     }
 }
