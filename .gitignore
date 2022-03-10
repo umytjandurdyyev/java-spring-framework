@@ -21,6 +21,8 @@ target/
 *.xml
 *.cmd
 *.mvn
+*.html
+*.xhtml
 
 ### NetBeans ###
 /nbproject/private/
