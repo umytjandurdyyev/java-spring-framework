@@ -10,9 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@RequestMapping("/mentor") // mentor/list
 public class MentorController {
 
-    @RequestMapping("mentor")
+    @RequestMapping("list")
     public String mentorList(Model model){
 //        Mentor mentor = new Mentor("Mike","Smith",35, Gender.MALE);
         List<Mentor> mentorList = new ArrayList<Mentor>();
