@@ -15,7 +15,7 @@ public class Department extends BaseEntity{
 //    private Long id;
     private String department;
     private String division;
-    @OneToOne(mappedBy = "department") // by directional
+    @OneToOne(mappedBy = "department") // by directional // ownership of this relation
     private Employee employee;
 
     public Department(String department, String division) {

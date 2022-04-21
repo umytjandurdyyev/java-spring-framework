@@ -56,14 +56,24 @@ public class DataGenerator implements CommandLineRunner {
         e4.setDepartment(d4);
         e5.setDepartment(d5);
 
+        e1.setRegion(r1);
+        e2.setRegion(r2);
+        e3.setRegion(r3);
+        e4.setRegion(r4);
+        e5.setRegion(r5);
+
         employeeList.addAll(Arrays.asList(e1,e2,e3,e4,e5));
         employeeRepository.saveAll(employeeList);
 
         departmentList.addAll(Arrays.asList(d1,d2,d3,d4,d5));
+
+        // because of cascading no need to use
 //        departmentRepository.saveAll(departmentList);
 
         regionList.addAll(Arrays.asList(r1,r2,r3,r4,r5));
-        regionRepository.saveAll(regionList);
+
+        // because of cascading no need to use
+//        regionRepository.saveAll(regionList);
 
 
     }
