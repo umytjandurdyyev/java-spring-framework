@@ -23,6 +23,7 @@ target/
 *.mvn
 *.html
 *.xhtml
+*.sql
 
 ### NetBeans ###
 /nbproject/private/
