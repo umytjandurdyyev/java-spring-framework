@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController // @Controller + @ResponseBody
-@RequestMapping("/courses")
+@RequestMapping("/courses/api/v1")
 public class CourseController {
     private final CourseService courseService;
 
@@ -18,20 +18,20 @@ public class CourseController {
     /*
     GET
      */
-    //localhost:8080/courses
+    //localhost:8080/courses/api/v1
     @GetMapping
     public List<CourseDTO> getAllCourses(){
         List<CourseDTO> list = courseService.getCourses();
         return list;
     }
 
-    //localhost:8080/courses/3 or localhost:8080/courses/:id
+    //localhost:8080/courses/api/v1/3 or localhost:8080/courses/api/v1/:id
     @GetMapping("{id}")
     public CourseDTO getCourseById(@PathVariable("id") Long courseId){
         return courseService.getCourseById(courseId);
     }
 
-    //localhost:8080/courses/category/React
+    //localhost:8080/courses/category/api/v1/React
     @GetMapping("category/{name}")
     public List<CourseDTO> getCourseByCategory(@PathVariable("name") String category){
         return courseService.getCoursesByCategory(category);
@@ -48,7 +48,7 @@ public class CourseController {
     /*
     PUT
      */
-    //localhost:8080/courses/3
+    //localhost:8080/courses/api/v1/3
     @PutMapping("{id}")
     public void updateCourse(@PathVariable("id") Long courseId, @RequestBody CourseDTO course){
         courseService.updateCourse(courseId,course);
@@ -57,7 +57,7 @@ public class CourseController {
     /*
     DELETE
      */
-    //localhost:8080/courses/3
+    //localhost:8080/courses/api/v1/3
     @DeleteMapping("{id}")
     public void deleteCourseId(@PathVariable("id") Long courseId){
         courseService.deleteCourseById(courseId);
