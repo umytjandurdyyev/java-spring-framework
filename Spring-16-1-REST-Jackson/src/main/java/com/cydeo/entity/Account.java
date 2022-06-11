@@ -16,7 +16,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Table(name = "account_details")
 //@JsonIgnoreProperties(value = {"state","postalCode"},ignoreUnknown = true)
-@JsonIgnoreProperties(value = {"hibernateLazyInitializer"},ignoreUnknown = true)
+// if we have fetch type Lazy, so this will ignore that line
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer"},ignoreUnknown = true) // ignoreUnknown is for prevent post externally
 public class Account extends BaseEntity {
 
     private String name;

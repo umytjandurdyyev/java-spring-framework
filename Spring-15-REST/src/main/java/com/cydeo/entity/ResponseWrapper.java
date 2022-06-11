@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 @Setter
 @Getter
 @NoArgsConstructor
+// Custom Json body
 public class ResponseWrapper {
 
     private boolean success;
