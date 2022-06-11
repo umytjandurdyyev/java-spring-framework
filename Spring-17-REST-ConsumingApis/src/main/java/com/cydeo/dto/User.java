@@ -69,6 +69,7 @@ public class User {
     }
 
     @JsonProperty("username")
+    @JsonIgnore
     public void setUsername(String username) {
         this.username = username;
     }
