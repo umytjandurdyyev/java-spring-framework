@@ -25,6 +25,7 @@ target/
 *.html
 *.xhtml
 *.sql
+*.csv
 
 ### NetBeans ###
 /nbproject/private/
