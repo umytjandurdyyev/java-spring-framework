@@ -5,18 +5,16 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class CydeoApp {
     public static void main(String[] args) {
+        ApplicationContext container = new AnnotationConfigApplicationContext(ConfigApp.class, ConfigAny.class);
 
-        ApplicationContext container = new AnnotationConfigApplicationContext(ConfigApp.class,ConfigAny.class);
-
+        /*
+        container.getBean(FullTimeMentor.class)
+        means go to container and tell spring give FullTimeMentor object(bean)
+        ft is a bean from the container
+         */
         FullTimeMentor ft = container.getBean(FullTimeMentor.class);
-//        PartTimeMentor pt = container.getBean("test",PartTimeMentor.class);
-        PartTimeMentor pt = container.getBean(PartTimeMentor.class);
-
         ft.createAccount();
-        pt.createAccount();
 
-        String str = container.getBean(String.class);
-        System.out.println(str);
-
+        System.out.println(container.getBean(String.class));
     }
 }
