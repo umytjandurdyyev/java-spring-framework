@@ -1,32 +1,30 @@
 package com.cydeo;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+import lombok.Data;
+import org.springframework.context.annotation.*;
 
 @Configuration
 public class ConfigCar {
     @Bean
     Car car(){
-       Car c = new Car();
-       c.setMake("Honda");
-       return c;
+        Car c = new Car();
+        c.setMake("Honda");
+        return c;
     }
-    // Direct wiring
+
 //    @Bean
 //    Person person(){
 //        Person p = new Person();
 //        p.setName("Mike");
-//        p.setCar(car());
+//        p.setCar(car()); // direct wiring
 //        return p;
 //    }
 
-    // Autowiring
     @Bean
     Person person(Car car){
         Person p = new Person();
         p.setName("Mike");
-        p.setCar(car);
+        p.setCar(car); // Auto wiring
         return p;
     }
 }
