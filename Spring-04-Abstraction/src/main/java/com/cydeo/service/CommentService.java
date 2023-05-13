@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("PUSH")
 public class CommentService {
     private final CommentRepository commentRepository;
     private final CommentNotificationProxy commentNotificationProxy;
     @Autowired
-    public CommentService(CommentRepository commentRepository, @Qualifier("PUSH ") CommentNotificationProxy commentNotificationProxy) {
+//    public CommentService(CommentRepository commentRepository, @Qualifier("commentPushNotificationProxy") CommentNotificationProxy commentNotificationProxy) {
+    public CommentService(CommentRepository commentRepository, @Qualifier("PUSH") CommentNotificationProxy commentNotificationProxy) {
         this.commentRepository = commentRepository;
         this.commentNotificationProxy = commentNotificationProxy;
     }
