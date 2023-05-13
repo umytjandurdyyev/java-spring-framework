@@ -3,7 +3,7 @@ package com.cydeo.service.impl;
 import com.cydeo.dto.ProjectDTO;
 import com.cydeo.dto.TaskDTO;
 import com.cydeo.dto.UserDTO;
-import com.cydeo.entity.User;
+import com.cydeo.model.User;
 import com.cydeo.mapper.UserMapper;
 import com.cydeo.repository.UserRepository;
 import com.cydeo.service.ProjectService;

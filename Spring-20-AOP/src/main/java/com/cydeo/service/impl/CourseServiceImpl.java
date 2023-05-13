@@ -2,7 +2,7 @@ package com.cydeo.service.impl;
 
 import com.cydeo.annotation.Loggable;
 import com.cydeo.dto.CourseDTO;
-import com.cydeo.entity.Course;
+import com.cydeo.model.Course;
 import com.cydeo.repository.CourseRepository;
 import com.cydeo.service.CourseService;
 import com.cydeo.util.MapperUtil;

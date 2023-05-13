@@ -1,7 +1,7 @@
 package com.cydeo.controller;
 
-import com.cydeo.entity.Account;
-import com.cydeo.entity.User;
+import com.cydeo.model.Account;
+import com.cydeo.model.User;
 import com.cydeo.repository.AccountRepository;
 import com.cydeo.repository.UserRepository;
 import org.springframework.web.bind.annotation.GetMapping;

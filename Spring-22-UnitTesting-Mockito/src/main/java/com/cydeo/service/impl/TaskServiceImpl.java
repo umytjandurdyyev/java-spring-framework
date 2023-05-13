@@ -2,8 +2,8 @@ package com.cydeo.service.impl;
 
 import com.cydeo.dto.ProjectDTO;
 import com.cydeo.dto.TaskDTO;
-import com.cydeo.entity.Task;
-import com.cydeo.entity.User;
+import com.cydeo.model.Task;
+import com.cydeo.model.User;
 import com.cydeo.enums.Status;
 import com.cydeo.mapper.ProjectMapper;
 import com.cydeo.mapper.TaskMapper;

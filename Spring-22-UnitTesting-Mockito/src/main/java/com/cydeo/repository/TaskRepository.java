@@ -1,8 +1,8 @@
 package com.cydeo.repository;
 
-import com.cydeo.entity.Project;
-import com.cydeo.entity.Task;
-import com.cydeo.entity.User;
+import com.cydeo.model.Project;
+import com.cydeo.model.Task;
+import com.cydeo.model.User;
 import com.cydeo.enums.Status;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

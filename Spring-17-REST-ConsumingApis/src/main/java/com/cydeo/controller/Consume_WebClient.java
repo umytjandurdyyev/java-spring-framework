@@ -1,7 +1,7 @@
 package com.cydeo.controller;
 
-import com.cydeo.entity.Genre;
-import com.cydeo.entity.MovieCinema;
+import com.cydeo.model.Genre;
+import com.cydeo.model.MovieCinema;
 import com.cydeo.repository.GenreRepository;
 import com.cydeo.repository.MovieCinemaRepository;
 import org.springframework.http.HttpHeaders;

@@ -1,6 +1,6 @@
 package com.cydeo.service;
 
-import com.cydeo.entity.Student;
+import com.cydeo.model.Student;
 import com.cydeo.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 

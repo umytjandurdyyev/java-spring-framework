@@ -1,4 +1,4 @@
-package com.cydeo.entity;
+package com.cydeo.model;
 
 import org.springframework.context.annotation.Primary;
 

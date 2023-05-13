@@ -1,6 +1,6 @@
 package com.cydeo.controller;
 
-import com.cydeo.entity.User;
+import com.cydeo.model.User;
 import com.cydeo.repository.UserRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -6,15 +6,15 @@ import com.cydeo.service.CommentService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class CydeoApp {
+public class MainApp {
     public static void main(String[] args) {
         Comment comment = new Comment();
         comment.setAuthor("Johnson");
-        comment.setText("Spring Framework");
+        comment.setText("Spring framework");
 
+        // Create a container
         ApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
-
-        CommentService commentService = context.getBean(CommentService.class);
-        commentService.publishComment(comment);
+        // commentService object
+        context.getBean(CommentService.class).publishComment(comment);
     }
 }

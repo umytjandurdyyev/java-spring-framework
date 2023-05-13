@@ -1,7 +1,7 @@
 package com.cydeo.service.impl;
 
 import com.cydeo.dto.ProjectDTO;
-import com.cydeo.entity.Project;
+import com.cydeo.model.Project;
 import com.cydeo.mapper.ProjectMapper;
 import com.cydeo.repository.ProjectRepository;
 import org.junit.jupiter.api.Test;

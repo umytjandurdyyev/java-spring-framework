@@ -1,6 +1,6 @@
 package com.cydeo.bootstrap;
 
-import com.cydeo.entity.Car;
+import com.cydeo.model.Car;
 import com.cydeo.repository.CarRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

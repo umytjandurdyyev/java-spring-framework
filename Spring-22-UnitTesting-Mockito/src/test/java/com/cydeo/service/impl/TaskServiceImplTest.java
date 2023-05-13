@@ -1,7 +1,7 @@
 package com.cydeo.service.impl;
 
 import com.cydeo.dto.TaskDTO;
-import com.cydeo.entity.Task;
+import com.cydeo.model.Task;
 import com.cydeo.mapper.TaskMapper;
 import com.cydeo.repository.TaskRepository;
 import org.junit.jupiter.api.Test;

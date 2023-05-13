@@ -1,4 +1,4 @@
-package com.cydeo.entity;
+package com.cydeo.model;
 
 import com.cydeo.enums.UserRole;
 import com.fasterxml.jackson.annotation.JsonBackReference;

@@ -2,8 +2,8 @@ package com.cydeo.service.impl;
 
 import com.cydeo.dto.ProjectDTO;
 import com.cydeo.dto.UserDTO;
-import com.cydeo.entity.Project;
-import com.cydeo.entity.User;
+import com.cydeo.model.Project;
+import com.cydeo.model.User;
 import com.cydeo.enums.Status;
 import com.cydeo.mapper.ProjectMapper;
 import com.cydeo.mapper.UserMapper;

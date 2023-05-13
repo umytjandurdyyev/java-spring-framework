@@ -1,6 +1,6 @@
 package com.cydeo.repository;
 
-import com.cydeo.entity.Cinema;
+import com.cydeo.model.Cinema;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

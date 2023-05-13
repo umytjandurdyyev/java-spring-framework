@@ -1,7 +1,7 @@
 package com.cydeo.service;
 
 import com.cydeo.dto.ProjectDTO;
-import com.cydeo.entity.User;
+import com.cydeo.model.User;
 
 import java.util.List;
 

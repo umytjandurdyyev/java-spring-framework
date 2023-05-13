@@ -1,6 +1,6 @@
 package com.cydeo.repository;
 
-import com.cydeo.entity.Movie;
+import com.cydeo.model.Movie;
 import com.cydeo.enums.MovieState;
 import com.cydeo.enums.MovieType;
 import org.springframework.data.jpa.repository.JpaRepository;

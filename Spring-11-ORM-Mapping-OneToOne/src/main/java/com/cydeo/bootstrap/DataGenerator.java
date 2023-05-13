@@ -1,8 +1,8 @@
 package com.cydeo.bootstrap;
 
-import com.cydeo.entity.Department;
-import com.cydeo.entity.Employee;
-import com.cydeo.entity.Region;
+import com.cydeo.model.Department;
+import com.cydeo.model.Employee;
+import com.cydeo.model.Region;
 import com.cydeo.enums.Gender;
 import com.cydeo.repository.DepartmentRepository;
 import com.cydeo.repository.EmployeeRepository;

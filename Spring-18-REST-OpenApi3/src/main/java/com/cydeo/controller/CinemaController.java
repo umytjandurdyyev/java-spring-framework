@@ -1,6 +1,6 @@
 package com.cydeo.controller;
 
-import com.cydeo.entity.Cinema;
+import com.cydeo.model.Cinema;
 import com.cydeo.repository.CinemaRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
