@@ -5,10 +5,13 @@ import com.cydeo.proxy.CommentNotificationProxy;
 import com.cydeo.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class CommentService {
+    @Value("${name}")
+    private String name;
     private final CommentRepository commentRepository;
     private final CommentNotificationProxy commentNotificationProxy;
     @Autowired
