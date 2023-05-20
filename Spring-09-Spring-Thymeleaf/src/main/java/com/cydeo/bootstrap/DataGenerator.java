@@ -1,6 +1,6 @@
 package com.cydeo.bootstrap;
 
-import com.cydeo.model.Student;
+import com.cydeo.entity.Student;
 import com.github.javafaker.Faker;
 
 import java.util.Arrays;

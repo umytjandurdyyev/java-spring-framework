@@ -1,14 +1,13 @@
-package com.cydeo.model;
+package com.cydeo.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Mentor {
-
     private String firstname;
     private String lastname;
     private String email;
