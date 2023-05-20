@@ -21,4 +21,8 @@ public class StudentController {
         model.addAttribute("id", id);
         return "student/welcome";
     }
+    @RequestMapping("/welcome2")
+    public String info2( Model model){
+        return "student/welcome2";
+    }
 }
