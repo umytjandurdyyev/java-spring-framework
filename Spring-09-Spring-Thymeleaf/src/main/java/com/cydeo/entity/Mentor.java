@@ -1,5 +1,6 @@
 package com.cydeo.entity;
 
+import com.cydeo.enums.Gender;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,4 +16,12 @@ public class Mentor {
     private String batch;
     private boolean graduated;
     private String company;
+
+    public Mentor(String firstname, String lastname, String email, Gender gender) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.gender = String.valueOf(gender);
+    }
+
 }
