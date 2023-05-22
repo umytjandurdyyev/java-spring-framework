@@ -9,10 +9,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Mentor {
+
     private String firstname;
     private String lastname;
     private String email;
-    private String gender;
+    private Gender gender;
     private String batch;
     private boolean graduated;
     private String company;
@@ -21,7 +22,6 @@ public class Mentor {
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
-        this.gender = String.valueOf(gender);
+        this.gender = Gender.valueOf(String.valueOf(gender));
     }
-
 }
