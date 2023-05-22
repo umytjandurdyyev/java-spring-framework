@@ -13,7 +13,7 @@ public class Mentor {
     private String firstname;
     private String lastname;
     private String email;
-    private Gender gender;
+    private String gender;
     private String batch;
     private boolean graduated;
     private String company;
@@ -22,6 +22,6 @@ public class Mentor {
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
-        this.gender = Gender.valueOf(String.valueOf(gender));
+        this.gender = String.valueOf(Gender.valueOf(String.valueOf(gender)));
     }
 }
