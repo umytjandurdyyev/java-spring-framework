@@ -20,6 +20,7 @@ target/
 *.ipr
 *.cmd
 *.mvn
+*.sql
 *.csv
 
 ### NetBeans ###
