@@ -1,8 +1,8 @@
 package com.cydeo.bootstrap;
 
-import com.cydeo.model.Department;
-import com.cydeo.model.Employee;
-import com.cydeo.model.Region;
+import com.cydeo.entity.Department;
+import com.cydeo.entity.Employee;
+import com.cydeo.entity.Region;
 import com.cydeo.enums.Gender;
 import com.cydeo.repository.DepartmentRepository;
 import com.cydeo.repository.EmployeeRepository;
@@ -26,9 +26,9 @@ public class DataGenerator implements CommandLineRunner {
         this.departmentRepository = departmentRepository;
         this.regionRepository = regionRepository;
     }
-
     @Override
     public void run(String... args) throws Exception {
+
         List<Employee> employeeList = new ArrayList<>();
         Employee e1 = new Employee("Berrie", "Manueau", "bmanueau0@dion.ne.jp", LocalDate.of(2006,04,20), Gender.MALE,154864);
         Employee e2 = new Employee("Aeriell", "McNee", "amcnee1@google.es", LocalDate.of(2009,01,26), Gender.FEMALE,56752);
@@ -50,31 +50,22 @@ public class DataGenerator implements CommandLineRunner {
         Region r4 = new Region("Quebec'","Canada");
         Region r5 = new Region("Central","Asia");
 
-        e1.setDepartment(d1);
-        e2.setDepartment(d2);
-        e3.setDepartment(d3);
-        e4.setDepartment(d4);
-        e5.setDepartment(d5);
-
-        e1.setRegion(r1);
-        e2.setRegion(r2);
-        e3.setRegion(r3);
-        e4.setRegion(r4);
-        e5.setRegion(r5);
+//        e1.setDepartment(d1);
+//        e2.setDepartment(d2);
+//        e3.setDepartment(d3);
+//        e4.setDepartment(d4);
+//        e5.setDepartment(d5);
+//
+//        e1.setRegion(r1);
+//        e2.setRegion(r2);
+//        e3.setRegion(r3);
+//        e4.setRegion(r4);
+//        e5.setRegion(r5);
 
         employeeList.addAll(Arrays.asList(e1,e2,e3,e4,e5));
         employeeRepository.saveAll(employeeList);
 
         departmentList.addAll(Arrays.asList(d1,d2,d3,d4,d5));
-
-        // because of cascading no need to use
-//        departmentRepository.saveAll(departmentList);
-
-        regionList.addAll(Arrays.asList(r1,r2,r3,r4,r5));
-
-        // because of cascading no need to use
-//        regionRepository.saveAll(regionList);
-
 
     }
 }
