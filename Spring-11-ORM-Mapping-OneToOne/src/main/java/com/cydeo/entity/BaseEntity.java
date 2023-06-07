@@ -1,8 +1,6 @@
 package com.cydeo.entity;
 
 import jakarta.persistence.*;
-
-@Entity
 @MappedSuperclass // I do not want create a table from this class
 public class BaseEntity {
     @Id
