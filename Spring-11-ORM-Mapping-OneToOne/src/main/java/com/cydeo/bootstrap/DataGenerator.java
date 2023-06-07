@@ -50,22 +50,30 @@ public class DataGenerator implements CommandLineRunner {
         Region r4 = new Region("Quebec'","Canada");
         Region r5 = new Region("Central","Asia");
 
-//        e1.setDepartment(d1);
-//        e2.setDepartment(d2);
-//        e3.setDepartment(d3);
-//        e4.setDepartment(d4);
-//        e5.setDepartment(d5);
-//
-//        e1.setRegion(r1);
-//        e2.setRegion(r2);
-//        e3.setRegion(r3);
-//        e4.setRegion(r4);
-//        e5.setRegion(r5);
+        e1.setDepartment(d1);
+        e2.setDepartment(d2);
+        e3.setDepartment(d3);
+        e4.setDepartment(d4);
+        e5.setDepartment(d5);
+
+        e1.setRegion(r1);
+        e2.setRegion(r2);
+        e3.setRegion(r3);
+        e4.setRegion(r4);
+        e5.setRegion(r5);
 
         employeeList.addAll(Arrays.asList(e1,e2,e3,e4,e5));
-//        employeeRepository.saveAll(employeeList);
-//
         departmentList.addAll(Arrays.asList(d1,d2,d3,d4,d5));
+        regionList.addAll(Arrays.asList(r1,r2,r3,r4,r5));
+
+        employeeRepository.saveAll(employeeList);
+
+        // we do not need this line because when e1 saved then d1 also saved
+        // because of cascading no need to use
+//        departmentRepository.saveAll(departmentList);
+
+        // because of cascading no need to use
+//        regionRepository.saveAll(regionList);
 
     }
 }
