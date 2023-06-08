@@ -15,18 +15,18 @@ import java.util.List;
 @NoArgsConstructor
 public class Customer extends BaseEntity{
     private String userName;
-    private String name;
-    private String surName;
+    private String firstName;
+    private String lastName;
     private String email;
     private String address;
 
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     private List<Payment> paymentList;
 
-    public Customer(String userName, String name, String surName, String email, String address) {
+    public Customer(String userName, String firstName, String lastName, String email, String address) {
         this.userName = userName;
-        this.name = name;
-        this.surName = surName;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.address = address;
     }

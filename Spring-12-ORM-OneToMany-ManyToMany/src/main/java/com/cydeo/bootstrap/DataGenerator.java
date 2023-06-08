@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Arrays;
 
 @Component
 public class DataGenerator implements CommandLineRunner {
@@ -42,32 +43,32 @@ public class DataGenerator implements CommandLineRunner {
         Item item2 = new Item("Sugar","S01");
         Item item3 = new Item("Bread","B01");
 
-//        Cart cart1 = new Cart();
-//        Cart cart2 = new Cart();
-//
-//        cart1.setItemList(Arrays.asList(item1,item2,item3));
-//        cart2.setItemList(Arrays.asList(item1,item2));
-//
-//        itemRepository.save(item1);
-//        itemRepository.save(item2);
-//        itemRepository.save(item3);
-//
-//        cartRepository.save(cart1);
-//        cartRepository.save(cart2);
-//
-//        payment1.setPaymentDetail(paymentDetail1);
-//        payment2.setPaymentDetail(paymentDetail2);
-//
-//        payment1.setMerchant(merchant1);
-//        payment2.setMerchant(merchant1);
-//
-//        merchantRepository.save(merchant1);
-//
-//        payment1.setCustomer(customer1);
-//        payment2.setCustomer(customer1);
-//
-//        customerRepository.save(customer1);
-//
+        Cart cart1 = new Cart();
+        Cart cart2 = new Cart();
+
+        cart1.setItemList(Arrays.asList(item1,item2,item3));
+        cart2.setItemList(Arrays.asList(item1,item2));
+
+        itemRepository.save(item1);
+        itemRepository.save(item2);
+        itemRepository.save(item3);
+
+        cartRepository.save(cart1);
+        cartRepository.save(cart2);
+
+        payment1.setPaymentDetail(paymentDetail1);
+        payment2.setPaymentDetail(paymentDetail2);
+
+        payment1.setMerchant(merchant1);
+        payment2.setMerchant(merchant1);
+
+        merchantRepository.save(merchant1);
+
+        payment1.setCustomer(customer1);
+        payment2.setCustomer(customer1);
+
+        customerRepository.save(customer1);
+
         paymentRepository.save(payment1);
         paymentRepository.save(payment2);
     }
