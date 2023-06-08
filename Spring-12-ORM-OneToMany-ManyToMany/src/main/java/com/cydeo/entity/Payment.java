@@ -18,4 +18,16 @@ public class Payment extends BaseEntity{
     private LocalDate createdDate;
     @Enumerated(EnumType.STRING)
     private Status status;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private PaymentDetail paymentDetail;
+
+    @ManyToOne
+    private Merchant merchant;
+
+    public Payment(LocalDate createdDate,BigDecimal amount,Status status) {
+        this.amount = amount;
+        this.createdDate = createdDate;
+        this.status = status;
+    }
 }

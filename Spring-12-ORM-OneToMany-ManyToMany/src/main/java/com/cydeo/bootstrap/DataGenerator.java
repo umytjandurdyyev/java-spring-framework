@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Arrays;
 
 @Component
 public class DataGenerator implements CommandLineRunner {
@@ -69,7 +68,7 @@ public class DataGenerator implements CommandLineRunner {
 //
 //        customerRepository.save(customer1);
 //
-//        paymentRepository.save(payment1);
-//        paymentRepository.save(payment2);
+        paymentRepository.save(payment1);
+        paymentRepository.save(payment2);
     }
 }

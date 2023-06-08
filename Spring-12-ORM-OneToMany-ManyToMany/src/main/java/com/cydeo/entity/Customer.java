@@ -15,4 +15,12 @@ public class Customer extends BaseEntity{
     private String surName;
     private String email;
     private String address;
+
+    public Customer(String userName, String name, String surName, String email, String address) {
+        this.userName = userName;
+        this.name = name;
+        this.surName = surName;
+        this.email = email;
+        this.address = address;
+    }
 }
