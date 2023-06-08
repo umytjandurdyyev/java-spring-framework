@@ -21,8 +21,8 @@ public class Merchant extends BaseEntity{
     private BigDecimal commissionRate;
     private int payoutDelayCount;
 
-    @OneToMany // one merchant to many payment
-    private List<Payment> payment;
+    @OneToMany(mappedBy = "merchant") // one merchant to many payment
+    private List<Payment> payments;
 
     public Merchant(String code, String name, BigDecimal transactionFee, BigDecimal commissionRate, int payoutDelayCount) {
         this.code = code;
