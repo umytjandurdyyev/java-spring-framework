@@ -20,19 +20,20 @@ public class QueryTester implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("******************REGION START******************");
-        System.out.println("findByCountry:" + regionRepository.findByCountry("Canada"));
-        System.out.println("findDistinctByCountry:" + regionRepository.findDistinctByCountry("Canada"));
-        System.out.println("findByCountryContains:" + regionRepository.findByCountryContains("United"));
-        System.out.println("findByCountryContainsOrderByCountry" + regionRepository.findByCountryContainingOrderByCountry("Asia"));
-        System.out.println("findTopByCountry:" + regionRepository.findTop2ByCountry("United States"));
+        System.out.println("findByCountry: " + regionRepository.findByCountry("Canada"));
+        System.out.println("findDistinctByCountry: " + regionRepository.findDistinctByCountry("Canada"));
+        System.out.println("findByCountryContains: " + regionRepository.findByCountryContains("United"));
+        System.out.println("findByCountryContainsOrderByCountry: " + regionRepository.findByCountryContainingOrderByCountry("Asia"));
+        System.out.println("findTopByCountry: " + regionRepository.findTop2ByCountry("United States"));
         System.out.println("******************REGION END********************");
 
-//        System.out.println("******************DEPARTMENT START******************");
-//        System.out.println("findByDepartment:" + departmentRepository.findByDepartment("Toys"));
-//        System.out.println("findByDivisionIs:" + departmentRepository.findByDivisionIs("Outdoors"));
-//        System.out.println("findDistinctTop3ByDivisionContaining:" + departmentRepository.findDistinctTop3ByDivisionContaining("Hea"));
-//        System.out.println("******************DEPARTMENT END********************");
-//
+        System.out.println("******************DEPARTMENT START******************");
+        System.out.println("findByDepartment: " + departmentRepository.findByDepartment("Toys"));
+        System.out.println("findByDivisionIs: " + departmentRepository.findByDivisionIs("Outdoors"));
+        System.out.println("findByDivisionEquals: " + departmentRepository.findByDivisionEquals("Outdoors"));
+        System.out.println("findDistinctTop3ByDivisionContaining: " + departmentRepository.findDistinctTop3ByDivisionContaining("Hea"));
+        System.out.println("******************DEPARTMENT END********************");
+
 //        System.out.println("******************EMPLOYEE START******************");
 //        System.out.println("findByEmail" + employeeRepository.findByEmail("bmanueau0@dion.ne.jp"));
 //        System.out.println("findByFirstNameIsNot:" + employeeRepository.findByFirstNameIsNot("Sydney"));
