@@ -24,7 +24,7 @@ public class QueryTester implements CommandLineRunner {
         System.out.println("findDistinctByCountry:" + regionRepository.findDistinctByCountry("Canada"));
         System.out.println("findByCountryContains:" + regionRepository.findByCountryContains("United"));
         System.out.println("findByCountryContainsOrderByCountry" + regionRepository.findByCountryContainingOrderByCountry("Asia"));
-        System.out.println("findTopByCountry:" + regionRepository.findTop2ByCountry("Canada"));
+        System.out.println("findTopByCountry:" + regionRepository.findTop2ByCountry("United States"));
         System.out.println("******************REGION END********************");
 
 //        System.out.println("******************DEPARTMENT START******************");
