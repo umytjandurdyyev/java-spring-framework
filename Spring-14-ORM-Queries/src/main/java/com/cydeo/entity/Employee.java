@@ -1,10 +1,10 @@
-package com.cydeo.model;
+package com.cydeo.entity;
 
 import com.cydeo.enums.Gender;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -12,7 +12,6 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 public class Employee extends BaseEntity{
-
     private String firstName;
     private String lastName;
     private String email;
@@ -22,11 +21,11 @@ public class Employee extends BaseEntity{
     private Gender gender;
     private int salary;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "department")
     private Department department;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
+    @JoinColumn(name = "region_id")
     private Region region;
-
 }

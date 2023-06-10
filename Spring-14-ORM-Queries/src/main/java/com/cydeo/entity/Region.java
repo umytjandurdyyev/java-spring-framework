@@ -1,11 +1,9 @@
-package com.cydeo.model;
+package com.cydeo.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 @Entity
 @Table(name = "regions")
@@ -14,6 +12,4 @@ import javax.persistence.Table;
 public class Region extends BaseEntity{
     private String region;
     private String country;
-
-
 }
