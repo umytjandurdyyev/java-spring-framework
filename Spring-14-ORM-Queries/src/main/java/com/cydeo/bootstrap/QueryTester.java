@@ -34,19 +34,19 @@ public class QueryTester implements CommandLineRunner {
         System.out.println("findDistinctTop3ByDivisionContaining: " + departmentRepository.findDistinctTop3ByDivisionContaining("Hea"));
         System.out.println("******************DEPARTMENT END********************");
 
-//        System.out.println("******************EMPLOYEE START******************");
-//        System.out.println("findByEmail" + employeeRepository.findByEmail("bmanueau0@dion.ne.jp"));
-//        System.out.println("findByFirstNameIsNot:" + employeeRepository.findByFirstNameIsNot("Sydney"));
-//        System.out.println("findByFirstNameAndLastNameOrEmail:" + employeeRepository.findByFirstNameAndLastNameOrEmail("Sydney","Symonds","ssymonds2@hhs.gov"));
-//        System.out.println("findByLastNameStartsWith:" + employeeRepository.findByLastNameStartsWith("Sy"));
-//        System.out.println("findBySalaryGreaterThan:" +  employeeRepository.findBySalaryGreaterThan(45000));
-//        System.out.println("findBySalaryLessThanEqual:" + employeeRepository.findBySalaryLessThanEqual(63000));
-////        System.out.println("findByHireDateBetween:" + employeeRepository.findByHireDateBetween());
-//        System.out.println("findBySalaryGreaterThanEqualOrderBySalaryDesc:" + employeeRepository.findBySalaryGreaterThanEqualOrderBySalaryDesc(75000));
-//        System.out.println("findDistinctTop3BySalaryLessThan:" + employeeRepository.findDistinctTop3BySalaryLessThan(69000));
-//        System.out.println("findByEmailIsNull:" + employeeRepository.findByEmailIsNull());
-//        System.out.println("getEmployeeDetail:" + employeeRepository.getEmployeeDetail());
-//        System.out.println("getEmployeeSalary:" + employeeRepository.getEmployeeSalary());
-//        System.out.println("******************EMPLOYEE END********************");
+        System.out.println("******************EMPLOYEE START******************");
+        System.out.println("findByEmail: " + employeeRepository.findByEmail("bmanueau0@dion.ne.jp"));
+        System.out.println("findByFirstNameIsNot: " + employeeRepository.findTop5ByFirstNameIsNot("Sydney"));
+        System.out.println("findByFirstNameAndLastNameOrEmail: " + employeeRepository.findByFirstNameAndLastNameOrEmail("Sydney","Symonds","ssymonds2@hhs.gov"));
+        System.out.println("findByLastNameStartsWith: " + employeeRepository.findByLastNameStartsWith("Sy"));
+        System.out.println("findBySalaryGreaterThan: " +  employeeRepository.findBySalaryGreaterThan(45000));
+        System.out.println("findBySalaryLessThanEqual: " + employeeRepository.findBySalaryIsLessThanEqual(63000));
+//        System.out.println("findByHireDateBetween: " + employeeRepository.findByHireDateBetween(2013-11-03,));
+        System.out.println("findBySalaryGreaterThanEqualOrderBySalaryDesc: " + employeeRepository.findBySalaryGreaterThanEqualOrderBySalaryDesc(75000));
+        System.out.println("findDistinctTop3BySalaryLessThan: " + employeeRepository.findDistinctTop3BySalaryLessThan(69000));
+        System.out.println("findByEmailIsNull: " + employeeRepository.findByEmailIsNull());
+//        System.out.println("getEmployeeDetail: " + employeeRepository.getEmployeeDetail());
+//        System.out.println("getEmployeeSalary: " + employeeRepository.getEmployeeSalary());
+        System.out.println("******************EMPLOYEE END********************");
     }
 }
