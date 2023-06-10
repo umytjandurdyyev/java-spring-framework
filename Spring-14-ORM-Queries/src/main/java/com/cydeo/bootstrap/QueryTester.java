@@ -6,8 +6,10 @@ import com.cydeo.repository.EmployeeRepository;
 import com.cydeo.repository.RegionRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
+@Transactional
 public class QueryTester implements CommandLineRunner {
     private final RegionRepository regionRepository;
     private final DepartmentRepository departmentRepository;
@@ -66,7 +68,7 @@ public class QueryTester implements CommandLineRunner {
         System.out.println("============");
         courseRepository.findByNameStartsWith("Getting").forEach(System.out::println);
         System.out.println("============");
-//        courseRepository.streamByCategory("Spring").forEach(System.out::println);
+        courseRepository.streamByCategory("Spring").forEach(System.out::println);
         System.out.println("-----------------COURSE  END------------------");
     }
 }

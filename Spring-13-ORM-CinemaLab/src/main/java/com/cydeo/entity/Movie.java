@@ -4,7 +4,10 @@ import com.cydeo.enums.MovieState;
 import com.cydeo.enums.MovieType;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
@@ -12,7 +15,8 @@ import java.util.Set;
 
 @Entity
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 public class Movie extends BaseEntity{
     private String name;
     @Column(columnDefinition = "DATE")
