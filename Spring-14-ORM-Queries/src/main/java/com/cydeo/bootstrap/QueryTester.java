@@ -45,8 +45,9 @@ public class QueryTester implements CommandLineRunner {
         System.out.println("findBySalaryGreaterThanEqualOrderBySalaryDesc: " + employeeRepository.findBySalaryGreaterThanEqualOrderBySalaryDesc(75000));
         System.out.println("findDistinctTop3BySalaryLessThan: " + employeeRepository.findDistinctTop3BySalaryLessThan(69000));
         System.out.println("findByEmailIsNull: " + employeeRepository.findByEmailIsNull());
-//        System.out.println("getEmployeeDetail: " + employeeRepository.getEmployeeDetail());
-//        System.out.println("getEmployeeSalary: " + employeeRepository.getEmployeeSalary());
+        System.out.println("===================JPQL==========================");
+        System.out.println("getEmployeeDetail: " + employeeRepository.getEmployeeDetail());
+        System.out.println("getEmployeeSalary: " + employeeRepository.getEmployeeSalary());
         System.out.println("******************EMPLOYEE END********************");
     }
 }
