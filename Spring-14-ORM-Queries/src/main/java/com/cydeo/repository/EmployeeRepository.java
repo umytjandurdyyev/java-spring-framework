@@ -2,8 +2,11 @@ package com.cydeo.repository;
 
 import com.cydeo.entity.Department;
 import com.cydeo.entity.Employee;
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -41,13 +44,18 @@ public interface EmployeeRepository extends JpaRepository<Employee,Long> {
     // display all employees that do not have email address
     List<Employee> findByEmailIsNull();
 
-    // JPQL
+    /**
+     * JPQL
+     */
     @Query("SELECT e FROM Employee e WHERE e.email = 'amcnee1@google.es'")
     Employee getEmployeeDetail();
 
     @Query("SELECT e.salary FROM Employee e WHERE e.email = 'amcnee1@google.es'")
     Integer getEmployeeSalary();
 
+    /**
+     * positional parameter
+     */
     @Query("SELECT e FROM Employee e WHERE e.email=?1")
     Optional<Employee> getEmployeeDetail(String email);
 
@@ -93,4 +101,33 @@ public interface EmployeeRepository extends JpaRepository<Employee,Long> {
     //Sorting in descending order
     @Query("SELECT e FROM Employee e ORDER BY e.salary DESC ")
     List<Employee> getEmployeeSalaryOrderDesc();
+
+    /**
+     * Native Query
+     */
+    @Query(value = "SELECT * FROM employees e WHERE e.salary ?1", nativeQuery = true)
+    List<Employee> readEmployeeDetailBySalary(Integer salary);
+
+    /**
+     * named parameter
+     */
+    @Query("SELECT e FROM Employee e WHERE e.salary = :salary")
+    List<Employee> getEmployeeSalary(@Param("salary") Integer salary);
+
+    @Query("SELECT e FROM Employee e WHERE e.firstName = :name OR e.salary = :salary")
+    List<Employee> getEmployeeFirstNameOrSalary(@Param("name") String firstName, @Param("salary") int salary);
+
+    /**
+     * Modifying
+     */
+    @Modifying
+    @Transactional
+    @Query("UPDATE Employee e SET e.email = 'admin@email.com' WHERE e.id=:id")
+    void updateEmployeeJPQL(@Param("id") int id);
+
+    @Modifying
+    @Transactional
+    @Query(value = "UPDATE employees SET email = 'admin@email.com' WHERE id=:id",nativeQuery = true)
+    void updateEmployeeNativeQuery(@Param("id") int id);
+
 }
