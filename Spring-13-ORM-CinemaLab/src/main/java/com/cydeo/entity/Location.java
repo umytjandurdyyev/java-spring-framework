@@ -9,8 +9,7 @@ import lombok.Setter;
 import java.math.BigDecimal;
 @Entity
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class Location extends BaseEntity{
     private String name;
     private BigDecimal latitude;

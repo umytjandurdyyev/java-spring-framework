@@ -1,5 +1,6 @@
 package com.cydeo.bootstrap;
 
+import com.cydeo.enums.Role;
 import com.cydeo.repository.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -22,6 +23,20 @@ public class QueryRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
+        System.out.println("===============Account================");
+        System.out.println("findAllByCountryOrState: " +  accountRepository.findAllByCountryOrState("United State", "New York"));
+        System.out.println("++++++++++");
+        System.out.println("findAllByAgeLessThanEqual: " + accountRepository.findAllByAgeLessThanEqual(56));
+        System.out.println("++++++++++");
+        System.out.println("findAllByRole: " + accountRepository.findAllByRole(Role.USER));
+        System.out.println("++++++++++");
+        System.out.println("findByAgeBetween: " + accountRepository.findByAgeBetween(28,90));
+        System.out.println("++++++++++");
+        System.out.println("findByAddressStartingWith: " + accountRepository.findByAddressStartingWith("ate"));
+        System.out.println("++++++++++");
+        System.out.println("findByOrderByAge: " + accountRepository.findByOrderByAgeDesc());
+        System.out.println("--------------------------------------");
 
 //        System.out.println(accountRepository.fetchAdminUsers());
 //        System.out.println(cinemaRepository.distinctBySponsoredName());

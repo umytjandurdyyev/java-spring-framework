@@ -13,8 +13,7 @@ import java.util.Set;
 
 @Entity
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class Genre extends BaseEntity {
     private String name;
 
