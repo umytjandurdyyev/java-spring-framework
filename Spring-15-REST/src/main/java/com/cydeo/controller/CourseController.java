@@ -6,13 +6,13 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
-@RestController
+@RestController // @Controller + @ResponseBody
 @RequestMapping("/courses")
 public class CourseController {
 
@@ -27,5 +27,13 @@ public class CourseController {
 
         List<CourseDTO> list = courseService.getCourses();
         return list;
+    }
+    @GetMapping("{id}")
+    public CourseDTO getCourseById(@PathVariable("id") Long courseId){
+        return courseService.getCourseById(courseId);
+    }
+    @GetMapping("category/{name}")
+    public List<CourseDTO> getCourseByCategory(@PathVariable("name") String category){
+        return courseService.getCoursesByCategory(category);
     }
 }
