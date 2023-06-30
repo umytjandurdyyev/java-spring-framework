@@ -19,6 +19,9 @@ public class CourseController {
         this.courseService = courseService;
     }
 
+    /**
+     * GET
+     */
     @GetMapping
     public List<CourseDTO> getAllCourses(){
 
