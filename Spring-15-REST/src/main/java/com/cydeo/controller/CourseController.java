@@ -36,6 +36,10 @@ public class CourseController {
     public List<CourseDTO> getCourseByCategory(@PathVariable("name") String category){
         return courseService.getCoursesByCategory(category);
     }
+
+    /**
+     * POST
+     */
     @PostMapping
     public CourseDTO createCourse(@RequestBody CourseDTO course){
         return courseService.createCourse(course);
