@@ -12,7 +12,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/courses/api/v2")
 public class CourseController_ResponseEntity {
-
+    /**
+     * Modify response header or status
+     */
     private final CourseService courseService;
 
 
@@ -20,7 +22,7 @@ public class CourseController_ResponseEntity {
         this.courseService = courseService;
     }
 
-    /*
+    /**
     GET
      */
     //localhost:9090/courses/api/v2
@@ -39,7 +41,7 @@ public class CourseController_ResponseEntity {
         return ResponseEntity.ok(courseService.getCourseById(courseId));
     }
 
-    /*
+    /**
     POST
      */
     //localhost:9090/courses/api/v2
