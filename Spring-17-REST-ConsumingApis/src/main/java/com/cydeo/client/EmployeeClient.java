@@ -9,5 +9,5 @@ import org.springframework.web.bind.annotation.RequestHeader;
 public interface EmployeeClient {
 
     @GetMapping("/data/v1/user?limit=10")
-    Employee getEmployees(@RequestHeader("app-id") String id);
+    Employee getEmployees(@RequestHeader("app-id") String id); // to send a header
 }

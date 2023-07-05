@@ -5,7 +5,6 @@ import com.cydeo.client.UserClient;
 import com.cydeo.dto.ResponseWrapper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -18,9 +17,14 @@ public class Consume_FeignClient {
         this.userClient = userClient;
         this.employeeClient = employeeClient;
     }
-    @GetMapping("'api/v1/users")
+    @GetMapping("/api/v1/users")
     public ResponseEntity<ResponseWrapper> getUsers(){
 
         return ResponseEntity.ok(new ResponseWrapper("UserList Retrieved", userClient.getUsers()));
+    }
+
+    @GetMapping("/api/v1/employees")
+    public ResponseEntity<ResponseWrapper> getEmployees(){
+        return ResponseEntity.ok(new ResponseWrapper("Successful retrieved",employeeClient.getEmployees("6298ebfecd0551211fce37a6")));
     }
 }
