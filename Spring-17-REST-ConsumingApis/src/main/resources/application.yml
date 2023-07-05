@@ -3,9 +3,9 @@ server:
   port: 9090
 
 spring:
-#  sql:
-#    init:
-#      mode: always
+  sql:
+    init:
+      mode: always
   datasource:
     url: jdbc:postgresql://localhost:5432/cydeo
     username: postgres
