@@ -86,7 +86,7 @@ public class Consume_WebClient {
 
         return webClient
                 .get()
-                .uri("/flux-movie-cinema")
+                .uri("/flux-movie-cinemas")
                 .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .retrieve()
                 .bodyToFlux(MovieCinema.class);
