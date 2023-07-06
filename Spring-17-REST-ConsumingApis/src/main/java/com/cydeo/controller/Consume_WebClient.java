@@ -15,7 +15,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 @RestController
 public class Consume_WebClient {
 
-    private WebClient webClient = WebClient.builder().baseUrl("http://localhost:8080").build();
+    private WebClient webClient = WebClient.builder().baseUrl("http://localhost:9090").build();
     private final MovieCinemaRepository movieCinemaRepository;
     private final GenreRepository genreRepository;
 
@@ -30,7 +30,7 @@ public class Consume_WebClient {
      * Use Flux because of doing reactive way
      * Do not block structure
      */
-    @GetMapping("/flux-movie-cinema")
+    @GetMapping("/flux-movie-cinemas")
     public Flux<MovieCinema> readAllCinemaFlux(){
 
         return Flux.fromIterable(movieCinemaRepository.findAll());
@@ -42,18 +42,33 @@ public class Consume_WebClient {
 //        return Mono.just(movieCinemaRepository.findById(id).get()); // we use get() because it is Optional
 //    }
 
+    /**
+     *
+     * @param id
+     * @return mono
+     */
     @GetMapping("/mono-movie-cinema/{id}")
     public ResponseEntity<Mono<MovieCinema>> readById(@PathVariable("id") Long id){
 
         return ResponseEntity.ok(Mono.just(movieCinemaRepository.findById(id).get())); // we use get() because it is Optional
     }
 
+    /**
+     *
+     * @param genre, paste an Object
+     * @return new mono Genre
+     */
     @PostMapping("/create-genre")
     public Mono<Genre> createGenre(@RequestBody Genre genre){
         Genre createGenre = genreRepository.save(genre);
         return Mono.just(createGenre);
     }
 
+    /**
+     *
+     * @param id
+     * @return void or empty
+     */
     @DeleteMapping("/delete/genre/{id}")
     public Mono<Void> deleteGenre(@PathVariable("id") Long id){
         genreRepository.deleteById(id);
@@ -80,9 +95,9 @@ public class Consume_WebClient {
     public Mono<MovieCinema> readMonoWithWebClient(@PathVariable("id") Long id){
 
         return webClient
-                .get()
+                .get() // which method will be run
                 .uri("/mono-movie-cinema/{id}",id)
                 .retrieve()
-                .bodyToMono(MovieCinema.class);
+                .bodyToMono(MovieCinema.class); // which class is gonna mapped
     }
 }
