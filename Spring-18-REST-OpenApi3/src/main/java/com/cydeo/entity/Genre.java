@@ -1,11 +1,9 @@
-package com.cydeo.model;
+package com.cydeo.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
+import jakarta.persistence.*;
 import java.util.List;
 
 @Entity

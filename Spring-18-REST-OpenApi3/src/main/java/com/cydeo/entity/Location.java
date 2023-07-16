@@ -1,9 +1,9 @@
-package com.cydeo.model;
+package com.cydeo.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity

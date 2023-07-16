@@ -1,12 +1,12 @@
-package com.cydeo.model;
+package com.cydeo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
 
 @Entity
 @Data
@@ -15,19 +15,17 @@ import javax.persistence.*;
 @JsonIgnoreProperties(value = {"hibernateLazyInitializer"},ignoreUnknown = true)
 public class User extends BaseEntity {
 
-//    @JsonIgnore
+    //    @JsonIgnore
     private String email;
 
-
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) // only execute setters
     private String password;
-
 
     private String username;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "account_details_id")
-    @JsonManagedReference //is the forward part of reference - the one that gets serialized normally
+    @JsonManagedReference  // is the forward part of reference - the one that gets serialized normally
     private Account account;
 
 }

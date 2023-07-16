@@ -1,21 +1,22 @@
-package com.cydeo.model;
+package com.cydeo.entity;
 
 import com.cydeo.enums.UserRole;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import javax.persistence.*;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @Table(name = "account_details")
-@JsonIgnoreProperties(value = {"hibernateLazyInitializer"},ignoreUnknown = true)
+//@JsonIgnoreProperties(value = {"state","postalCode"},ignoreUnknown = true)
+// if we have fetch type Lazy, so this will ignore that line
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer"},ignoreUnknown = true) // ignoreUnknown is for prevent post externally
 public class Account extends BaseEntity {
 
     private String name;
