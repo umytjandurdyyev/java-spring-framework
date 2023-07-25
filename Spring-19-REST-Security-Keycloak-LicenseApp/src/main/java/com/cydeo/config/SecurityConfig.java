@@ -44,6 +44,6 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
                 new SessionRegistryImpl());
 }
 @Bean
-    public KeycloakConfigResolver KeycloakConfigResolver() {
+public KeycloakConfigResolver KeycloakConfigResolver() {
         return new KeycloakSpringBootConfigResolver();
 } }

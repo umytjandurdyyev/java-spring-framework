@@ -2,11 +2,12 @@ package com.cydeo.controller;
 
 import com.cydeo.model.License;
 import com.cydeo.service.LicenseService;
+import jakarta.annotation.security.RolesAllowed;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.security.RolesAllowed;
+import jakarta.persistence.*;
 import java.util.List;
 
 @RestController
