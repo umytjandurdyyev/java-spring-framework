@@ -7,3 +7,5 @@ https://jsonplaceholder.typicode.com/users
 https://www.jsonschema2pojo.org/
 
 https://swagger.io/specification/
+
+https://jwt.io/
