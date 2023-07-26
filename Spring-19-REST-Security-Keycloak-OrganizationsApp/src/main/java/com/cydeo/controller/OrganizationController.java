@@ -2,12 +2,9 @@ package com.cydeo.controller;
 
 import com.cydeo.model.Organization;
 import com.cydeo.service.OrganizationService;
-import jakarta.annotation.security.RolesAllowed;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import jakarta.persistence.*;
 
 @RestController
 @RequestMapping(value = "/v1/organization")
@@ -19,19 +16,16 @@ public class OrganizationController {
         this.organizationService = organizationService;
     }
 
-    @RolesAllowed({"ADMIN","USER"})
     @GetMapping("/{organizationId}")
     public ResponseEntity<Organization> getOrganization(@PathVariable("organizationId") Long organizationId) throws Exception {
         return ResponseEntity.ok(organizationService.findById(organizationId));
     }
 
-    @RolesAllowed({"ADMIN","USER"})
     @PostMapping
     public ResponseEntity<Organization> createOrganization(@RequestBody Organization organization) {
         return ResponseEntity.status(HttpStatus.CREATED).body(organizationService.create(organization));
     }
 
-    @RolesAllowed({"ADMIN"})
     @DeleteMapping("/{organizationId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteLicense(@PathVariable("organizationId") Long organizationId) {
