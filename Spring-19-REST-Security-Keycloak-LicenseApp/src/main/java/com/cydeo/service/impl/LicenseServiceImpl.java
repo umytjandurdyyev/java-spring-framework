@@ -5,6 +5,7 @@ import com.cydeo.model.Organization;
 import com.cydeo.repository.LicenseRepository;
 import com.cydeo.client.OrganizationFeignClient;
 import com.cydeo.service.LicenseService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public class LicenseServiceImpl implements LicenseService {
     private final LicenseRepository licenseRepository;
     private final OrganizationFeignClient feignClient;
 
-    public LicenseServiceImpl(LicenseRepository licenseRepository, OrganizationFeignClient feignClient) {
+    public LicenseServiceImpl(@Qualifier("licences") LicenseRepository licenseRepository, OrganizationFeignClient feignClient) {
         this.licenseRepository = licenseRepository;
         this.feignClient = feignClient;
     }
