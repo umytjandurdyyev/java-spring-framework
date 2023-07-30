@@ -21,3 +21,17 @@ spring:
   jackson:
     serialization:
       fail-on-empty-beans: false
+
+  main:
+    allow-circular-references: true
+
+keycloak:
+  realm: cydeo-dev
+  auth-server-url: http://localhost:8080
+  ssl-required: external
+  resource: training
+  credentials:
+    secret: bVMboQbDPO585LnaVuPL2rLT0fG37qGS
+  use-resource-role-mappings: true
+  bearer-only: true
+
