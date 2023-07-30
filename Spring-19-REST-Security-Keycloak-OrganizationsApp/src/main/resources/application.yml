@@ -27,7 +27,7 @@ spring:
 
 keycloak:
   realm: cydeo-dev
-  auth-server-url: http://localhost:8080
+  auth-server-url: http://localhost:8080/auth
   ssl-required: external
   resource: training
   credentials:
